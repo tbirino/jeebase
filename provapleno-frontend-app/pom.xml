@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>br.com.provapleno</groupId>
+    <artifactId>prova</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>provapleno-frontend-app</artifactId>
+  <packaging>ear</packaging>
+
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ear-plugin</artifactId>
+        <version>2.8</version>
+        <configuration>
+          <filtering>true</filtering>
+          <finalName>${project.artifactId}</finalName>
+          <defaultLibBundleDir>lib</defaultLibBundleDir>
+          <generateApplicationXml>true</generateApplicationXml>
+          <modules>
+            <webModule>
+              <groupId>br.com.provapleno</groupId>
+              <artifactId>provapleno-frontend</artifactId>
+              <contextRoot>/frontend-provapleno</contextRoot>
+            </webModule>
+          </modules>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>br.com.provapleno</groupId>
+      <artifactId>provapleno-frontend</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+    </dependency>
+  </dependencies>
+
+</project>

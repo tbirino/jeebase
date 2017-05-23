@@ -1,0 +1,303 @@
+
+<div class="row" data-ng-controller="CadastrarPessoaController as aba">
+	<div class="form-group">
+		<div class="row">
+			<div class="form-group">
+				<label>Tipo:</label> <label class="radio-inline"> <input
+					type="radio" data-ng-click="aba.selectTab(1)"
+					name="optionsRadiosInline" id="optionsRadiosInline1"
+					value="option1" checked>Pessoa Física
+				</label> <label class="radio-inline"> <input type="radio"
+					data-ng-click="aba.selectTab(2)" name="optionsRadiosInline"
+					id="optionsRadiosInline2" value="option2">Pessoa Jurídica
+				</label>
+			</div>
+		</div>
+
+		<div data-ng-show="aba.isSelected(1)">
+
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<i class="fa fa-edit"></i> Dados Pessoa Física
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<form name="formPessoaFisica" role="form" data-ng-submit="">
+								<div class="col-lg-10">
+									<div class="form-group">
+										<label>Nome</label> <input placeholder="Digite seu nome"
+											data-ng-minlength="3" name="nomePessoaFisica"
+											data-ng-model="pessoaFisica.nome" class="form-control"
+											required> <span class="error"
+											data-ng-show="formPessoaFisica.nomePessoaFisica.$error.minlength">
+											Mínimo 3 caracteres</span>
+									</div>
+								</div>
+								<div class="col-lg-5">
+									<div class="form-group">
+										<label>CPF</label> <input class="form-control"
+											name="cpfPessoaFisica" placeholder="Digite seu CPF"
+											data-ng-model="pessoaFisica.cpf" ui-br-cpf-mask clean="false">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="col-lg-5">
+									<div class="form-group">
+										<label>RG</label> <input placeholder="Digite seu RG"
+											name="rgPessoaFisica" data-ng-model="pessoaFisica.rg"
+											ui-br-rg-mask class="form-control" required>
+									</div>
+								</div>
+
+								<div class="col-lg-4">
+									<div class="form-group">
+										<label>Data Nascimento</label> <input ui-date-mask type="date"
+											name="dataNascimentoPessoaFisica"
+											data-ng-model="pessoaFisica.dataNasc" class="form-control"
+											required>
+										<p class="help-block"></p>
+									</div>
+								</div>
+							</form>
+						</div>
+
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /panel-body -->
+			</div>
+			<!-- /panel panel-default -->
+		</div>
+		<!-- /col-lg-12 -->
+
+
+		<div class="col-lg-12" data-ng-show="aba.isSelected(2)">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<i class="fa fa-edit"></i> Dados Pessoa Jurídica
+				</div>
+
+
+				<div class="panel-body">
+					<div class="row">
+						<form role="form" data-ng-submit>
+							<div class="col-lg-10">
+								<div class="form-group">
+									<label>Razão Social</label> <input
+										placeholder="Digite sua razão social"
+										name="razaoSocialPessoaJuridica"
+										data-ng-model="pessoaJuridica.razaoSocial"
+										class="form-control" required>
+								</div>
+							</div>
+							<div class="col-lg-5">
+								<div class="form-group">
+									<label>CNPJ</label> <input placeholder="Digite seu CNPJ"
+										name="cnpjPessoaJuridica" data-ng-model="pessoaJuridica.cnpj"
+										class="form-control" ui-br-cnpj-mask>
+									<p class="help-block" required></p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<i class="fa fa-phone"></i> Dados do Contato
+			</div>
+
+			<div class="panel-body">
+				<div class="row">
+					<form role="form" data-ng-submit>
+						<div class="col-lg-10">
+							<div class="form-group">
+								<label>Email</label> <input type="email" name="endereco"
+									placeholder="Digite seu e-mail" data-ng-model="contato.email"
+									class="form-control" placeholder="email@example.com" required>
+
+							</div>
+						</div>
+
+						<div class="col-lg-10">
+							<div class="form-group">
+								<label>Site</label> <input placeholder="Digite seu site"
+									name="site" data-ng-model="contato.site" class="form-control"
+									required>
+							</div>
+						</div>
+
+						<div class="col-lg-5">
+							<div class="form-group">
+								<label>Telefone Residencial</label> <input
+									placeholder="Digite seu telefone residencial"
+									name="telefoneResidencial"
+									data-ng-model="contato.telefoneResidencial" ui-br-phone-number
+									class="form-control" required>
+							</div>
+						</div>
+
+						<div class="col-lg-5">
+							<div class="form-group">
+								<label>Telefone Celular</label> <input
+									placeholder="Digite seu telefone celular"
+									name="telefoneCelular" data-ng-model="contato.telefoneCelular"
+									ui-br-phone-number class="form-control" required>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- /.row (nested) -->
+		</div>
+		<!-- /.panel-body -->
+	</div>
+	<!-- /.panel -->
+
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<i class="fa fa-map-marker"></i> Dados de Endereço
+		</div>
+
+		<div class="panel-body">
+			<form role="form" data-ng-submit>
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="form-group">
+							<label>CEP</label> <input placeholder="Digite seu endereço"
+								name="cep" data-ng-model="endereco.cep" ui-br-cep-mask
+								class="form-control" data-ng-model="endereco.cep" required>
+
+						</div>
+					</div>
+
+
+					<div class="col-lg-4">
+						<div class="form-group">
+							<label>Cidade</label> <input placeholder="Digite sua cidade"
+								name="cidade" data-ng-model="endereco.cidade"
+								class="form-control" data-ng-model="endereco.uf" required>
+						</div>
+					</div>
+
+					<div class="col-lg-4">
+						<div class="form-group">
+							<label>Bairro</label> <input placeholder="Digite seu bairro"
+								name="bairro" data-ng-model="endereco.bairro"
+								class="form-control" data-ng-model="endereco.bairro" required>
+						</div>
+					</div>
+
+					<div class="col-lg-2">
+						<div class="form-group">
+							<label>Complemento/Número</label> <input
+								placeholder="Digite complemento endereço" name="complemento"
+								data-ng-model="endereco.complemento" class="form-control"
+								required>
+						</div>
+					</div>
+
+
+					<div class="col-lg-1">
+						<div class="form-group">
+							<label>UF</label> <select
+								data-ng-init="ufs=['DF','MG','GO','TO']" class="form-control"
+								data-ng-model="endereco.uf" name="uf"
+								data-ng-options="uf for uf in ufs" placeholder="(UF)"></select>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+</div>
+
+<!-- Pessoa Juridica -->
+
+<div class="col-lg-12" data-ng-show="aba.isSelected(2)">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<i class="fa fa-edit"></i> Dados Pessoa Jurídica
+		</div>
+
+
+		<div class="panel-body">
+			<form role="form" data-ng-submit="">
+				<div class="row">
+					<div class="col-lg-10">
+						<div class="form-group">
+							<label>Razão Social</label> <input
+								placeholder="Digite sua razão social"
+								data-ng-model="pessoa.nome" class="form-control" required>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<div class="form-group">
+							<label>CNPJ</label> <input placeholder="Digite seu CNPJ"
+								ui-br-cnpj-mask data-ng-model="pessoa.cpf" class="form-control">
+							<p class="help-block" required></p>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="pull-right" role="group" aria-label="...">
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-default">
+			<i class="fa fa-arrow-left"></i> Voltar
+		</button>
+	</div>
+	<div class="btn-group" role="group">
+		<button data-toggle="modal" data-target="#myModal" type="button"
+			class="btn btn-danger">
+			<i class="fa fa-remove"></i> Excluir
+		</button>
+	</div>
+	<div class="btn-group" role="group">
+		<button data-ng-submit="" type="button" class="btn btn-success">
+			<i class="fa fa-save"></i> Gravar
+		</button>
+	</div>
+</div>
+
+<!-- /.col-lg-12 -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			</div>
+			<div class="modal-body">Lorem ipsum dolor sit amet, consectetur
+				adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+				exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+				esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+				cupidatat non proident, sunt in culpa qui officia deserunt mollit
+				anim id est laborum.</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				<button type="button" data-ng-click="excluir()" data-dismiss="modal"
+					class="btn btn-primary">Confirmar</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

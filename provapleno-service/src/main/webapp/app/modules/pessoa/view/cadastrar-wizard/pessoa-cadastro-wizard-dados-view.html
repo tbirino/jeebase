@@ -1,0 +1,22 @@
+<div class="row" style="padding-bottom: 50px">
+	<div class="btn-group btn-group-justified" role="group"
+		aria-label="...">
+		<div class="btn-group" role="group">
+			<button type="button" class="btn btn-default"
+				data-ng-class="{active: pessoa.tipo == 'fisica'}"
+				ui-sref="app.private.pessoa.wizard.dados-gerais.pessoa-fisica"
+				data-ng-click="pessoaFisica()">Pessoa física</button>
+		</div>
+		<div class="btn-group" role="group">
+			<button type="button" class="btn btn-default"
+				data-ng-class="{active: pessoa.tipo == 'juridica'}"
+				ui-sref="app.private.pessoa.wizard.dados-gerais.pessoa-juridica"
+				data-ng-click="pessoaJuridica()">Pessoa jurídica</button>
+		</div>
+	</div>
+	<!-- .btn-group-justified -->
+</div>
+<!-- .row -->
+
+
+<div ui-view /></div>

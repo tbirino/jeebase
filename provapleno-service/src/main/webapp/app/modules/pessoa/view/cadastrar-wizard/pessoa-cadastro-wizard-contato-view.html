@@ -1,0 +1,51 @@
+<div class="row">
+	<div class="col-lg-12">
+		<div class="form-group"
+			data-ng-class="{'has-error' : formCadastro.cnpjPessoaJuridica.$invalid && formCadastro.cnpjPessoaJuridica.$dirty}">
+			<label for="pesssoaEmail">{{'label_contato_email' |
+				translate}}</label> <input placeholder="Digite seu e-mail"
+				name="pesssoaEmail" id="pesssoaEmail"
+				data-ng-model="pessoa.contato.email" class="form-control"
+				type="email" placeholder="email@example.com" required> <span
+				data-ng-show="formCadastro.email.$error.required">{{'Alerta_Email'
+				| translate}}</span>
+		</div>
+	</div>
+</div>
+<!-- .row -->
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="form-group"
+			data-ng-class="{'has-error' : formCadastro.site.$invalid && formCadastro.site.$dirty}">
+			<label for="pesssoaSite">{{'label_contato_site' | translate}}</label>
+			<input placeholder="Digite seu site" name="pesssoaSite"
+				id="pesssoaSite" data-ng-model="pessoa.contato.site"
+				class="form-control" required>
+		</div>
+	</div>
+</div>
+<!-- .row -->
+
+<div class="row">
+	<div class="col-lg-6">
+		<div class="form-group">
+			<label for="pessoaTelefoneResidencial">{{'label_contato_telefone_residencial'
+				| translate}}</label> <input placeholder="Digite seu telefone residencial"
+				name="pessoaTelefoneResidencial" id="pessoaTelefoneResidencial"
+				data-ng-model="pessoa.contato.telefoneResidencial"
+				ui-br-phone-number class="form-control" required>
+		</div>
+	</div>
+
+	<div class="col-lg-6">
+		<div class="form-group">
+			<label for="pesssoaTelefoneCelular">{{'label_contato_telefone_celular'
+				| translate}}</label> <input placeholder="Digite seu telefone celular"
+				id="pesssoaTelefoneCelular" name="pesssoaTelefoneCelular"
+				data-ng-model="pessoa.contato.telefoneCelular" ui-br-phone-number
+				class="form-control" required>
+		</div>
+	</div>
+</div>
+<!-- .row -->

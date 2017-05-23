@@ -1,0 +1,9 @@
+<div class="{{divclass}}">
+	<text id="{{idinput}}" class="{{inputclass}}" name="{{nome}}"
+		ng-show="edit" data-ng-model="model" data-ng-disabled="desabilitar"
+		ng-readonly="leitura" data-ng-required="validate"
+		placeholder="{{ placeholder | translate}}" clean="clean"
+		ui-br-cnpj-mask> </text>
+	<span data-ng-hide="edit" data-ng-model="model" class="{{inputclass}}">{{model
+		| cnpj}}</span>
+</div>

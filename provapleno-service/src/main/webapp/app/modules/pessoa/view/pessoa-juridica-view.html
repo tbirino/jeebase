@@ -1,0 +1,23 @@
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label>{{'label_pessoa_juridica_razao' | translate}}</label> <input
+				placeholder="Digite sua razão social"
+				name="pessoaJuridicaRazaoSocial" data-ng-model="pessoa.razaoSocial"
+				class="form-control" required>
+		</div>
+	</div>
+</div>
+<!-- .row -->
+
+<div class="row">
+	<div class="col-lg-5">
+		<div class="form-group">
+			<label>{{'label_pessoa_juridica_cnpj' | translate}}</label> <input
+				placeholder="Digite seu CNPJ" name="pessoaJuridicaCNPJ"
+				data-ng-model="pessoa.cnpj" class="form-control" ui-br-cnpj-mask>
+		</div>
+	</div>
+</div>
+<!-- .row -->

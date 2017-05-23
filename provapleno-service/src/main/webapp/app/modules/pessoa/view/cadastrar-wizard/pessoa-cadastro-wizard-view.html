@@ -1,0 +1,31 @@
+<div class="row bs-wizard" style="border-bottom: 0; margin-top: 20px">
+	<div data-ng-repeat="state in wizard.steps"
+		class="col-xs-{{12/wizard.size()}} bs-wizard-step"
+		data-ng-class="{active: wizard.isActive($index), complete: wizard.isComplete($index), disabled: wizard.isDisabled($index)}">
+		<div class="text-center bs-wizard-stepnum">
+			<strong>{{state.text}}</strong>
+		</div>
+		<div class="progress">
+			<div class="progress-bar"></div>
+		</div>
+		<a data-ng-click="wizard.goTo($index)" class="bs-wizard-dot"></a>
+		<div class="bs-wizard-info text-center">{{state.description}}</div>
+	</div>
+</div>
+
+<div style="margin-top: 50px; padding-bottom: 20px"></div>
+
+<div ui-view></div>
+
+<div class="btn-group pull-right" role="group">
+	<button class="btn" data-ng-click="wizard.previous();"
+		data-ng-class="{disabled: wizard.current() == -1 || wizard.isFirst()}">Anterior</button>
+	<button class="btn" data-ng-click="wizard.gravar()"
+		data-ng-class="{disabled: wizard.current() == -1 || wizard.isLast()}">Próximo</button>
+
+	<button class="btn btn-success" data-ng-show="wizard.isLast()"
+		data-ng-click="wizard.gravar()">Gravar</button>
+</div>
+
+
+<p>{{pessoa|json}}</p>

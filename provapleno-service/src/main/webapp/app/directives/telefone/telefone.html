@@ -1,0 +1,9 @@
+<div class="{{divclass}}">
+	<text id="{{idinput}}" class="{{inputclass}}" name="{{nome}}"
+		ng-show="edit" data-ng-model="model" data-ng-required="validate"
+		ng-disabled="desabilitar" data-ng-readonly="leitura"
+		placeholder="{{ placeholder | translate}}" ui-br-phone-number>
+	</text>
+	<span data-ng-hide="edit" data-ng-model="model" class="{{inputclass}}">{{model
+		| phone}}</span>
+</div>

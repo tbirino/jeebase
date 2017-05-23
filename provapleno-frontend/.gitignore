@@ -1,0 +1,11 @@
+/target/
+/.settings/
+/.classpath
+/.project
+/src/main/webapp/bower_components
+/src/main/webapp/node_modules
+/.externalToolBuilders/
+/npm-debug.log
+/target/
+/target-grunt/
+/target-grunt

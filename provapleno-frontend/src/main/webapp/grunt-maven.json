@@ -1,0 +1,9 @@
+{
+    "filesToWatch": "/home/thales/Documentos/provapleno/provadesenv/provapleno-frontend/src/main/webapp/static/**",
+    "directoryToWatch": "/home/thales/Documentos/provapleno/provadesenv/provapleno-frontend/src/main/webapp/static",
+    "projectRootPath": "/home/thales/Documentos/provapleno/provadesenv/provapleno-frontend",
+    "targetPath": "/home/thales/Documentos/provapleno/provadesenv/provapleno-frontend/target",
+    "sourceDirectory": "src/main/webapp",
+    "jsSourceDirectory": "static",
+    "filteredFiles": ["**/node_modules.tar"]
+}

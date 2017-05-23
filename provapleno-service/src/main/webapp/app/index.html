@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>pocAngularMaterial</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+<link rel='stylesheet'
+	href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+<link rel="stylesheet"
+	href="../bower_components/angular-material/angular-material.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link rel="stylesheet" href="assets/app.css" />
+</head>
+
+<body data-ng-app="pocAngularMaterial">
+
+	<div ui-view></div>
+
+
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-animate/angular-animate.js"></script>
+	<script src="../bower_components/angular-aria/angular-aria.js"></script>
+	<script src="../bower_components/angular-material/angular-material.js"></script>
+	<script	src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="../bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+	<script src="../bower_components/angular-resource/angular-resource.js"></script>
+	<script src="../bower_components/angular-translate/angular-translate.min.js"></script>
+	<script src="../bower_components/angular-translate-loader-url/angular-translate-loader-url.min.js"></script>
+	<script src="../bower_components/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>
+
+	<script src="./app.js"></script>
+	<script src="./interceptors/http-message-handle-interceptor.js"></script>
+	<script src="./config/config.js"></script>
+
+	<script src="./modules/main/main.js"></script>
+	<script src="./modules/login/login.js"></script>
+	<script src="./modules/pessoa/pessoa.js"></script>
+
+
+</body>
+</html>

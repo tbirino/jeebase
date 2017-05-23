@@ -1,0 +1,13 @@
+md-toast {
+    margin-left: auto;
+    margin-right: auto;
+}
+.md-default-theme.danger {
+    background-color: red;
+}
+.md-default-theme.success {
+    background-color: green;
+}
+.md-default-theme.primmary {
+    background-color: blue;
+}

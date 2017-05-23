@@ -1,0 +1,38 @@
+<div class="row bs-wizard" style="border-bottom: 0;">
+	<div data-ng-repeat="state in wizardCtrl.wizard.states"
+		class="col-xs-4 bs-wizard-step"
+		data-ng-class="{active: wizardCtrl.isActive($index), complete: wizardCtrl.isComplete($index), disabled: wizardCtrl.isDisabled($index)}">
+		<div class="text-center bs-wizard-stepnum">{{state.text}}</div>
+		<div class="progress">
+			<div class="progress-bar"></div>
+		</div>
+		<a data-ng-click="wizardCtrl.goTo($index)" class="bs-wizard-dot"></a>
+		<div class="bs-wizard-info text-center">{{state.description}}</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-3">
+		<a data-ng-click="wizardCtrl.goPrevious()"
+			data-ng-class="{disabled: wizardCtrl.current() == -1}"
+			class="btn btn-block btn-primary"><span
+			class="glyphicon glyphicon-circle-arrow-left"></span> Voltar</a>
+	</div>
+	<div class="col-md-4 col-md-offset-1">
+		<a data-ng-click="wizardCtrl.go(0)" data-ng-show="wizardCtrl.current() == -1"
+			class="btn btn-block btn-success"><span
+			class="glyphicon glyphicon-circle-arrow-right"></span> Começar</a>
+	</div>
+	<div class="col-md-3 col-md-offset-1">
+		<a data-ng-click="wizardCtrl.goNext()"
+			data-ng-class="{disabled: wizardCtrl.current() == -1}"
+			class="btn btn-block btn-primary"><span
+			class="glyphicon glyphicon-circle-arrow-right"></span> Avançar</a>
+	</div>
+</div>
+
+<div style="margin-top: 50px; padding-bottom: 20px"></div>
+
+<div ui-view />
+
+</div>

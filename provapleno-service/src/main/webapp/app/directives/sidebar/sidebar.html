@@ -1,0 +1,71 @@
+<div class="navbar-default sidebar" role="navigation">
+	<div class="sidebar-nav navbar-collapse">
+		<ul class="nav in" id="side-menu">
+			<sidebar-search></sidebar-search>
+			<li data-ng-class="{active: collapseVar==1}"><a href=""
+				data-ng-click="check(1)"><i class="fa fa-home  fa-fw"></i>Template<span
+					class="fa arrow"></span></a>
+				<ul class="nav nav-second-level" collapse="collapseVar!=1">
+					<li ui-sref-active="active"><a ui-sref="app.private.home"><i
+							class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
+					<li ui-sref-active="active"><a ui-sref="app.private.chart"><i
+							class="fa fa-bar-chart-o fa-fw"></i> Charts<span></span></a></li>
+					<li ui-sref-active="active"><a
+						ui-sref="app.private.table({data: { teste: 'Table' } })"><i
+							class="fa fa-table fa-fw"></i> Tables</a></li>
+					<li ui-sref-active="active"><a ui-sref="app.private.form"
+						ui-sref-opts=""><i class="fa fa-edit fa-fw"></i> Forms</a></li>
+					<li data-ng-class="{active: multiCollapseVar==2}">{{dropDown}}<a
+						href="" data-data-ng-click="multiCheck(2)"><i class="fa fa-wrench fa-fw"></i>
+							UI Elements<span class="fa arrow"></span></a>
+						<ul class="nav nav-template-level" collapse="multiCollapseVar!=2">
+							<li ui-sref-active="active"><a
+								ui-sref="app.private.panels-wells({data: { teste: 'Panels Wells' } })">Panels
+									and Wells</a></li>
+							<li ui-sref-active="active"><a ui-sref="app.private.buttons">Buttons</a></li>
+							<li ui-sref-active="active"><a
+								ui-sref="app.private.notifications">Notifications</a></li>
+							<li ui-sref-active="active"><a
+								ui-sref="app.private.typography">Typography</a></li>
+							<li ui-sref-active="active"><a ui-sref="app.private.icons">
+									Icons</a></li>
+							<li ui-sref-active="active"><a ui-sref="app.private.grid">Grid</a></li>
+						</ul>
+					</li>
+					<li data-ng-class="{active:multiCollapseVar==3}"><a href=""
+						data-ng-click="multiCheck(3)"><i class="fa fa-files-o fa-fw"></i>
+							Sample Pages<span class="fa arrow"></span> </a>
+						<ul class="nav nav-second-level" collapse="multiCollapseVar!=3">
+							<li data-ng-class="{active: selectedMenu=='blank'}"><a
+								ui-sref="app.private.blank({data: { teste: 'Blank' } })"
+								data-ng-click="selectedMenu='blank'">Blank Page</a></li>
+							<li><a ui-sref="app.private.login">Login Page</a></li>
+							<li><a ui-sref="app.private.readme">Readme</a></li>
+						</ul></li>
+				</ul></li>
+
+			<!-- CADASTROS-->
+			<li data-ng-class="{active:collapseVar==4}"><a href=""
+				data-ng-click="check(4)"><i class="fa fa-files-o fa-fw"></i>
+					Cadastros<span class="fa arrow"></span></a> <!-- PESSOA-->
+				<ul class="nav nav-second-level" collapse="collapseVar!=4">
+					<li data-ng-class="{active: selectedMenu=='pessoa'}"><a
+						ui-sref="app.private.pessoa.editar"
+						data-data-ng-click="selectedMenu='pessoa'"><i class="fa fa-user"></i>
+							Pessoa</a></li>
+				</ul></li>
+
+			<!-- CONSULTAS-->
+			<li data-ng-class="{active:collapseVar==5}"><a href=""
+				data-ng-click="check(5)"> <i class="fa fa-search fa-fw"></i>Consultas
+					<span class="fa arrow"></span></a> <!-- PESSOA-->
+				<ul class="nav nav-second-level" collapse="collapseVar!=5">
+					<li data-ng-class="{active: selectedMenu=='pessoaConsultar'}"><a
+						ui-sref="app.private.pessoa.consultar({currentPage: 1})"
+						data-ng-click="selectedMenu='pessoaConsultar'"><i
+							class="fa fa-user"></i> Pessoa</a></li>
+				</ul></li>
+
+		</ul>
+	</div>
+</div>

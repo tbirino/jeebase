@@ -1,0 +1,27 @@
+<div layout="row" layout-align="center center">
+  <md-content style="margin-top: 10%" flex="30" layout-padding md-theme="default">
+    <md-input-container>
+      <!-- Use floating label instead of placeholder -->      
+
+      <md-icon md-svg-src="assets/svg/ic_account_circle_black_24px.svg"></md-icon>
+      <input data-ng-model="user.name" type="text" placeholder="Username">
+    </md-input-container>
+
+    <md-input-container >
+      <!-- Use floating placeholder instead of label -->
+      <md-icon md-svg-src="assets/svg/ic_drafts_black_24px.svg"></md-icon>
+      <input data-ng-model="user.email" type="email" placeholder="Password" class="md-body-1" data-ng-required="true">
+    </md-input-container>
+
+    <md-input-container >
+        <md-checkbox md-no-ink aria-label="Checkbox No Ink" class="md-primary md-body-1">
+          Mantenha-me conectado
+        </md-checkbox>
+    </md-input-container>
+
+    <div layout="row" layout-align="center">
+      <md-button class="md-raised md-primary" data-ng-click="loginCtrl.testeAlerta()">Login</md-button>
+    </div>
+
+  </md-content>      
+</div>

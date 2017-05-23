@@ -1,0 +1,53 @@
+{
+  "alerta_nome": "preencha o campo nome",
+  "alerta_cpf": "preencha o campo cpf",
+  "alerta_bairro": "preencha o campo bairro",
+  "alerta_email": "preencha o campo email",
+
+
+  "label_pessoa_fisica_nome" : "nome",
+  "label_pessoa_fisica_cpf" : "cpf",
+  "label_pessoa_fisica_rg" : "rg",
+  "label_pessoa_fisica_data_nascimento" : "data nascimento",
+  "placeholder_pessoa_fisica_nome" : "nome",
+  "placeholder_pessoa_fisica_cpf": "digite o seu cpf",
+  "placeholder_pessoa_fisica_rg": "digite o seu cpf",
+
+
+  "label_pessoa_juridica_razao" : "razão social",
+  "label_pessoa_juridica_cnpj" : "cnpj",
+  "placeholder_pessoa_juridica_razao":"digite a razão social",
+  "placeholder_pessoa_juridica_cnpj":"digite o seu cnpj",
+
+
+  "label_contato_email" : "email",
+  "label_contato_site" : "site",
+  "label_contato_telefonere_sidencial" : "telefone residencial",
+  "label_contato_telefone_celular" : "telefone celular",
+  "placeholder_contato_email" : "email",
+  "placeholder_contato_site" : "site",
+  "placeholder_contato_telefonere_sidencial" : "telefone residencial",
+  "placeholder_contato_telefone_celular" : "telefone celular",
+
+
+  "label_endereco_rua" : "rua",
+  "label_endereco_numero" : "numero",
+  "label_endereco_bairro" : "bairro",
+  "label_endereco_cidade" : "cidade",  
+  "label_endereco_cep" : "cep",
+  "label_endereco_complemento" : "complemento", 
+  "label_endereco_uf" : "uf",
+  "placeholder_endereco_rua" : "rua",
+  "placeholder_endereco_numero" : "numero",
+  "placeholder_endereco_bairro" : "bairro",
+  "placeholder_endereco_cidade" : "cidade",  
+  "placeholder_endereco_cep" : "cep",
+  "placeholder_endereco_complemento" : "complemento", 
+  "placeholder_endereco_uf" : "uf",
+
+
+  "msg_invalid_cpf": "cpf inválido.",
+
+
+  "window_title": "Pessoa DO ARQUIVO BÃO"
+}

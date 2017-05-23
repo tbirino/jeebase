@@ -1,0 +1,49 @@
+<div class="row">
+	<div class="col-lg-12">
+		<div class="form-group"
+			data-ng-class="{'has-error' : formCadastro.nomePessoaFisica.$invalid && formCadastro.nomePessoaFisica.$dirty}">
+			<label>{{'label_pessoa_fisica_nome' | translate}}</label> <input
+				placeholder="Digite seu nome" id="pessoaFisicaNome"
+				name="pessoaFisicaNome" data-ng-model="pessoa.nome"
+				class="form-control" required> <span
+				data-ng-show="formCadastro.nomePessoaFisica.$error.required">{{'Alerta_Nome'
+				| translate}}</span>
+		</div>
+	</div>
+</div>
+<!-- .row -->
+
+<div class="row">
+	<div class="col-lg-6">
+		<div class="form-group">
+			<label>{{'label_pessoa_fisica_cpf' | translate}}</label> <input
+				class="form-control" name="pessoaFisicaCPF"
+				placeholder="Digite seu CPF" ui-br-cpf-mask
+				data-ng-model="pessoa.cpf" clean="false">
+			<p class="help-block"></p>
+		</div>
+	</div>
+
+	<div class="col-lg-6">
+		<div class="form-group"
+			data-ng-class="{'has-error' : formCadastro.rgPessoaFisica.$invalid && formCadastro.rgPessoaFisica.$dirty}">
+			<label>{{'label_pessoa_fisica_rg' | translate}}</label> <input
+				placeholder="Digite seu RG" name="pessoaFisicaRG"
+				data-ng-model="pessoa.rg" ui-br-rg-mask class="form-control"
+				required>
+		</div>
+	</div>
+</div>
+<!-- .row -->
+
+<div class="row">
+	<div class="col-lg-6">
+		<div class="form-group">
+			<label>{{'label_pessoa_fisica_data_nascimento' | translate}}</label>
+			<input type="date" name="pessoaFisicaDataNascimento"
+				data-ng-model="pessoa.dataNasc" class="form-control" required>
+			<p class="help-block"></p>
+		</div>
+	</div>
+</div>
+<!-- .row -->

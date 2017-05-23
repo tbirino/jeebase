@@ -1,0 +1,78 @@
+<div class="row">
+	<div class="col-lg-8">
+		<div class="form-group">
+			<label for="pessoaEnderecoRua">{{'label_endereco_rua' |
+				translate}}</label> <input type="text"
+				placeholder="{{'placeholder_endereco_rua' | translate}}"
+				id="pessoaEnderecoRua" name="pessoaEnderecoRua"
+				data-ng-model="pessoa.endereco.rua" class="form-control" required>
+		</div>
+	</div>
+
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label for="pesssoaEnderecoNumero">{{'label_endereco_numero'
+				| translate}}</label> <input
+				placeholder="{{'placeholder_endereco_numero' | translate}}"
+				id="pesssoaEnderecoNumero" name="pesssoaEnderecoNumero"
+				data-ng-model="pessoa.endereco.numero" class="form-control" required>
+		</div>
+	</div>
+</div>
+<!-- .row -->
+
+<div class="row">
+	<div class="col-lg-6">
+		<div class="form-group">
+			<label for="pesssoaEnderecoBairro">{{'label_endereco_bairro'
+				| translate}}</label> <input
+				placeholder="{{'placeholder_endereco_bairro' | translate}}"
+				id="pesssoaEnderecoBairro" name="pesssoaEnderecoBairro"
+				data-ng-model="pessoa.endereco.bairro" class="form-control" required>
+		</div>
+	</div>
+	<div class="col-lg-6">
+		<div class="form-group">
+			<label for="pesssoaEnderecoCidade">{{'label_endereco_cidade'
+				| translate}}</label> <input
+				placeholder="{{'placeholder_endereco_cidade' | translate}}"
+				id="pesssoaEnderecoCidade" name="pesssoaEnderecoCidade"
+				data-ng-model="pessoa.endereco.cidade" class="form-control" required>
+		</div>
+	</div>
+</div>
+<!-- .row -->
+
+<div class="row">
+	<div class="col-lg-6">
+		<div class="form-group">
+			<label for="pesssoaEnderecoCep">{{'label_endereco_cep' |
+				translate}}</label> <input
+				placeholder="{{'placeholder_endereco_cep' | translate}}"
+				id="pesssoaEnderecoCep" name="pesssoaEnderecoCep"
+				data-ng-model="pessoa.endereco.cep" ui-br-cep-mask
+				class="form-control" required>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="form-group">
+			<label for="pesssoaEnderecoComplemento">{{'label_endereco_complemento'
+				| translate}}</label> <input
+				placeholder="{{'placeholder_endereco_complemento' | translate}}"
+				id="pesssoaEnderecoComplemento" name="pesssoaEnderecoComplemento"
+				data-ng-model="pessoa.endereco.complemento" class="form-control"
+				required>
+		</div>
+	</div>
+
+	<div class="col-lg-3">
+		<div class="form-group">
+			<label for="pessoaEnderecoUf">{{'label_endereco_uf' |
+				translate}}</label> <select data-ng-init="ufs=['DF','MG','GO','TO']"
+				id="pessoaEnderecoUf" name="pessoaEnderecoUf" class="form-control"
+				data-ng-model="pessoa.endereco.uf" data-ng-options="uf for uf in ufs"
+				placeholder="(UF)"></select>
+		</div>
+	</div>
+</div>
+<!-- .row -->
