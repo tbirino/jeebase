@@ -32,10 +32,6 @@
               <groupId>br.com.provapleno</groupId>
               <artifactId>provapleno-core</artifactId>
             </ejbModule>
-            <jarModule>
-              <groupId>br.com.provapleno</groupId>
-              <artifactId>provapleno-integration</artifactId>
-            </jarModule>
           </modules>
         </configuration>
       </plugin>
@@ -54,12 +50,6 @@
       <artifactId>provapleno-service</artifactId>
       <version>${project.version}</version>
       <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>br.com.provapleno</groupId>
-      <artifactId>provapleno-integration</artifactId>
-      <version>${project.version}</version>
-      <type>jar</type>
     </dependency>
   </dependencies>
 

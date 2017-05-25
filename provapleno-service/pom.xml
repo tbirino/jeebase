@@ -32,12 +32,6 @@
       <type>ejb-client</type>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>br.com.provapleno</groupId>
-      <artifactId>provapleno-integration</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
   </dependencies>
 
 </project>

@@ -18,8 +18,6 @@
   
   <modules>
     <module>provapleno-core</module>
-    <module>provapleno-lib</module>
-    <module>provapleno-integration</module>
     <module>provapleno-service</module>
     <module>provapleno-service-app</module>
   </modules>

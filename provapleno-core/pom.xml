@@ -35,16 +35,6 @@
 
   <dependencies>
     <dependency>
-      <groupId>br.com.provapleno</groupId>
-      <artifactId>provapleno-lib</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>br.com.provapleno</groupId>
-      <artifactId>provapleno-integration</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>
       <version>2.3</version>

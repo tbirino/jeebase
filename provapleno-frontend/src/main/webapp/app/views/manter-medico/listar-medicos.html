@@ -1,0 +1,25 @@
+<div class="row">
+  <h1 class="page-header placeholders">
+    <span class="col-md-1">Médicos</span>
+    <div class="text-right">
+      <button type="button" class="btn btn-primary" ng-click="vm.abrirModalCadastrarMedico()">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        Novo Médico
+      </button>
+    </div>
+  </h1>
+</div>
+
+<div class="row">
+
+  <table id="tabela-de-medicos" class="table table-hover" ng-table="vm.tblMedicos">
+    <tr ng-repeat="medico in $data" class="text-center">
+      <td data-title="'Primeiro Nome'" sortable="'primeiroNome'">{{medico.primeiroNome}}</td>
+      <td data-title="'Ultimo Nome'" sortable="'ultimoNome'">{{medico.ultimoNome}}</td>
+      <td data-title="'Email'" sortable="'email'">{{medico.email}}</td>
+      <td data-title="'Ativo'" sortable="'ativo'">{{medico.ativo}}</td>
+      <td data-title="'Ocupado'" sortable="'status'">{{medico.status}}</td>
+    </tr>
+  </table>
+
+</div>

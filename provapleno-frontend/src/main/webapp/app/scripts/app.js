@@ -19,11 +19,12 @@ angular
     'toastr',
     'restangular',
     'ngTable',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ui.select'
   ])
   .config(function ($routeProvider, toastrConfig, RestangularProvider) {
 
-    RestangularProvider.setBaseUrl('http://aluno-servico.getsandbox.com/sis-backend/rest');
+    RestangularProvider.setBaseUrl('http://localhost:8080/backend-provapleno/rest');
 
     angular.extend(toastrConfig, {
       autoDismiss: false,
@@ -38,8 +39,8 @@ angular
 
     $routeProvider
       .when('/', {
-        templateUrl: 'views/manter-aluno/listarAlunos.html',
-        controller: 'ListarAlunosController',
+        templateUrl: 'views/manter-medico/listar-medicos.html',
+        controller: 'ListarMedicosController',
         controllerAs: 'vm'
       })
       .when('/about', {

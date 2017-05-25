@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
   <link rel="stylesheet" href="bower_components/ng-table-bundle/ng-table.css" />
+  <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -44,7 +45,7 @@
       <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#/">Manter Aluno</a></li>
+          <li class="active"><a href="#/">Manter Médico</a></li>
         </ul>
 
       </div>
@@ -92,6 +93,7 @@
 <script src="bower_components/restangular/dist/restangular.js"></script>
 <script src="bower_components/ng-table-bundle/ng-table.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-ui-select/dist/select.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -99,9 +101,10 @@
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/about.js"></script>
-<script src="scripts/controllers/manter-aluno/listarAlunosController.js"></script>
-<script src="scripts/controllers/manter-aluno/modalCadastrarAlunosController.js"></script>
-<script src="scripts/services/AlunoService.js"></script>
+<script src="scripts/controllers/manter-medico/listar-medicos-controller.js"></script>
+<script src="scripts/controllers/manter-medico/modal-manter-medico-controller.js"></script>
+<script src="scripts/services/MedicoService.js"></script>
+<script src="scripts/services/EstadosService.js"></script>
 <!-- endbuild -->
 </body>
 </html>

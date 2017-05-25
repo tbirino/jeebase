@@ -1,0 +1,75 @@
+<form id="form_ficha" name="form_ficha" class="form-horizontal">
+
+  <div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Cadastro de Médicos</h3>
+  </div>
+
+  <div class="modal-body" id="modal-body">
+
+    <div class="form-group">
+
+      <div class="col-sm-4">
+        <label for="primeiroNome" class="control-label">Primeiro Nome:</label>
+        <input type="text" class="form-control" name="primeiroNome" id="primeiroNome" ng-model="vm.medico.primeiroNome">
+      </div>
+      <div class="col-sm-4">
+        <label for="ultimoNome" class="control-label">Ultimo Nome:</label>
+        <input type="text" class="form-control" name="ultimoNome" id="ultimoNome" ng-model="vm.medico.ultimoNome">
+      </div>
+      <div class="col-sm-4">
+        <label for="especialidade" class="control-label">Especialidade:</label>
+        <select id="especialidade" name="especialidade" class="form-control"
+                ng-model="vm.medico.especialidade"></select>
+      </div>
+    </div>
+
+    <div class="form-group">
+
+      <div class="col-sm-4">
+        <label for="email" class="col-sm-3 control-label">Email:</label>
+        <input type="email" class="form-control" name="email" id="email" ng-model="vm.medico.email">
+      </div>
+
+      <div class="col-sm-4">
+        <label for="estado" class="control-label">Estado:</label>
+        <select id="estado" name="estado" class="form-control" ng-model="vm.medico.estado">
+          <option ng-repeat="estado in vm.estados">
+            {{estado.nome}}
+          </option>
+        </select>
+      </div>
+
+      <div class="col-sm-4">
+        <label for="cidade" class="control-label">Cidade:</label>
+        <input type="text" class="form-control" name="cidade" id="cidade" ng-model="vm.medico.cidade">
+      </div>
+
+    </div>
+
+    <div class="form-group">
+
+      <div class="col-sm-4">
+        <div class="checkbox">
+          <label class="checkbox-inline control-label"><input type="checkbox" value="" ng-model="vm.medico.ativo">Ativo</label>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <label class="radio-inline">
+          <input type="radio" name="ocupado" id="ocupado" value="0" ng-model="vm.medico.status"> Ocupado
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="disponivel" id="disponivel" value="1" ng-model="vm.medico.status"> Disponivel
+        </label>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="vm.salvar()">Salvar</button>
+    <button class="btn" type="button" ng-click="vm.cancelar()">Cancelar</button>
+  </div>
+
+</form>

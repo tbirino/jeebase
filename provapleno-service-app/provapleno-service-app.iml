@@ -18,10 +18,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="provapleno-core" />
-    <orderEntry type="module" module-name="provapleno-lib" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.3" level="project" />
-    <orderEntry type="module" module-name="provapleno-service" />
-    <orderEntry type="module" module-name="provapleno-integration" />
+    <orderEntry type="library" name="Maven: br.com.provapleno:provapleno-service:war:1.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: br.com.provapleno:provapleno-integration:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax:javaee-api:7.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.sun.mail:javax.mail:1.5.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.activation:activation:1.1" level="project" />

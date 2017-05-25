@@ -7,11 +7,11 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class PersistenciaBackend {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+	@PersistenceContext
+	private EntityManager entityManager;
 
-    protected EntityManager getEntityManager() {
-        return entityManager;
-    }
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
 
 }
